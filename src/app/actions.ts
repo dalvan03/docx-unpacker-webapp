@@ -26,7 +26,6 @@ function getMimeType(filename: string): string | undefined {
 export async function unpackDocx(
   fileBuffer: ArrayBuffer
 ): Promise<{ error?: string; files?: UnpackedFile[] }> {
-
   if (!fileBuffer) {
     return { error: "No file data received." };
   }
@@ -39,44 +38,41 @@ export async function unpackDocx(
       type: "directory",
       children: [],
     };
-    
+
     const directoryCache = new Map<string, UnpackedFile>();
     directoryCache.set('', root);
 
-    const zipEntries = Object.values(zip.files).sort((a,b) => a.name.localeCompare(b.name));
+    const zipEntries = Object.values(zip.files).sort((a, b) => a.name.localeCompare(b.name));
 
     for (const zipEntry of zipEntries) {
       if (zipEntry.dir) continue;
 
       const pathParts = zipEntry.name.split("/").filter(p => p);
-      let currentDir = root;
       let currentPath = '';
-
-      // Find or create parent directories
+      
+      // Ensure parent directories exist
       for (let i = 0; i < pathParts.length - 1; i++) {
         const part = pathParts[i];
         const parentPath = currentPath;
         currentPath = currentPath ? `${currentPath}/${part}` : part;
         
-        let nextDir = directoryCache.get(currentPath);
-        if (!nextDir) {
-            const parentDir = directoryCache.get(parentPath) ?? root;
-            nextDir = {
-                name: part,
-                path: currentPath,
-                type: 'directory',
-                children: [],
-            };
-            parentDir.children.push(nextDir);
-            directoryCache.set(currentPath, nextDir);
+        if (!directoryCache.has(currentPath)) {
+          const parentDir = directoryCache.get(parentPath) ?? root;
+          const newDir: UnpackedFile = {
+            name: part,
+            path: currentPath,
+            type: 'directory',
+            children: [],
+          };
+          parentDir.children.push(newDir);
+          directoryCache.set(currentPath, newDir);
         }
-        currentDir = nextDir;
       }
-      
+
+      const parentDir = directoryCache.get(currentPath) ?? root;
       const entryFileName = pathParts[pathParts.length - 1];
       const mimeType = getMimeType(entryFileName);
       const isText = mimeType?.includes("xml") || mimeType?.includes("text") || !mimeType;
-
 
       const fileNode: UnpackedFile = {
         name: entryFileName,
@@ -87,14 +83,16 @@ export async function unpackDocx(
         content: await zipEntry.async(isText ? "string" : "base64"),
       };
 
-      currentDir.children.push(fileNode);
+      parentDir.children.push(fileNode);
     }
-    
+
     return { files: root.children };
   } catch (e: unknown) {
     console.error("Error unpacking docx:", e);
     if (e instanceof Error) {
-        return { error: `Failed to unpack the file. It may be corrupted or in an unexpected format. Details: ${e.message}` };
+      return {
+        error: `Failed to unpack the file. It may be corrupted or in an unexpected format. Details: ${e.message}`,
+      };
     }
     return { error: "An unknown error occurred while unpacking the file." };
   }
