@@ -95,8 +95,11 @@ export async function unpackDocx(
     }
     
     return { files: root.children };
-  } catch (e) {
-    console.error(e);
-    return { error: "Failed to unpack the file. It may be corrupted." };
+  } catch (e: unknown) {
+    console.error("Error unpacking docx:", e);
+    if (e instanceof Error) {
+        return { error: `Failed to unpack the file. It may be corrupted or in an unexpected format. Details: ${e.message}` };
+    }
+    return { error: "An unknown error occurred while unpacking the file." };
   }
 }
