@@ -205,3 +205,7 @@ docx-unpacker-webapp/
 ---
 
 Need adjustments to content, locales, or integrations? Edit `dictionaries/`, `sitemap.ts`, `robots.txt`, and related components as described above. Update domain in the SEO sections when publishing.
+## 📸 Screenshots
+
+![Screenshot 1](docs/screen-shot-1.png)
+![Screenshot 2](docs/screen-shot-2.png)

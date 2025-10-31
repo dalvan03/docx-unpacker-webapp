@@ -9,3 +9,7 @@
 - 用 JSZip 喺瀏覽器解包 `.docx`
 - 檔案樹、圖片預覽、原始 XML、簡單文字預覽
 - 多語言同 locale-based SEO
+## 📸 Screenshots
+
+![Screenshot 1](docs/screen-shot-1.png)
+![Screenshot 2](docs/screen-shot-2.png)

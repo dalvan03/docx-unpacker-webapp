@@ -9,3 +9,7 @@ Ringkasan
 - Membuka `.docx` di browser menggunakan JSZip
 - Pohon berkas, pratinjau gambar, tampilan XML mentah, pratinjau teks sederhana
 - Multi-bahasa dengan SEO per-locale
+## 📸 Screenshots
+
+![Screenshot 1](docs/screen-shot-1.png)
+![Screenshot 2](docs/screen-shot-2.png)

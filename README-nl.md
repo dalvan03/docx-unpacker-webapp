@@ -9,3 +9,7 @@ Korte samenvatting
 - `.docx` uitpakken in de browser met JSZip
 - Bestandsboom, afbeeldingsweergave, ruwe XML, eenvoudige tekstweergave
 - Meertalig met SEO per locale
+## 📸 Screenshots
+
+![Screenshot 1](docs/screen-shot-1.png)
+![Screenshot 2](docs/screen-shot-2.png)

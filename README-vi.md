@@ -9,3 +9,7 @@ Tóm tắt
 - Giải nén `.docx` trên trình duyệt bằng JSZip
 - Cây tệp, xem trước hình ảnh, XML thô, xem trước văn bản đơn giản
 - Hỗ trợ đa ngôn ngữ và SEO theo locale
+## 📸 Screenshots
+
+![Screenshot 1](docs/screen-shot-1.png)
+![Screenshot 2](docs/screen-shot-2.png)

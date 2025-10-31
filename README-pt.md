@@ -9,3 +9,7 @@ Resumo
 - Descompactar `.docx` no navegador usando JSZip
 - Árvore de arquivos, visualização de imagem, XML bruto, preview simples de texto
 - Suporte a múltiplos idiomas com SEO por locale
+## 📸 Screenshots
+
+![Screenshot 1](docs/screen-shot-1.png)
+![Screenshot 2](docs/screen-shot-2.png)

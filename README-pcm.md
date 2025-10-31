@@ -9,3 +9,7 @@ Quick summary
 - Unpack `.docx` for browser using JSZip
 - File tree, image preview, raw XML view, simple text preview
 - Multilingual with locale-aware SEO
+## 📸 Screenshots
+
+![Screenshot 1](docs/screen-shot-1.png)
+![Screenshot 2](docs/screen-shot-2.png)
