@@ -5,7 +5,6 @@ import JSZip from "jszip";
 import { Download, RotateCcw, AlertCircle } from "lucide-react";
 
 import type { UnpackedFile } from "@/lib/types";
-import { unpackDocx } from "@/app/actions";
 import { FileUpload } from "@/components/file-upload";
 import { FileTree } from "@/components/file-tree";
 import { FileViewer } from "@/components/file-viewer";
@@ -30,8 +29,19 @@ export default function DocxUnpacker() {
     setFileName(file.name);
 
     try {
-      const fileBuffer = await file.arrayBuffer();
-      const result = await unpackDocx({ fileBuffer, fileName: file.name });
+      const formData = new FormData();
+      formData.append('file', file);
+      
+      const response = await fetch('/api/unpack', {
+          method: 'POST',
+          body: formData,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || `HTTP error! status: ${response.status}`);
+      }
 
       if (result.error) {
         setError(result.error);

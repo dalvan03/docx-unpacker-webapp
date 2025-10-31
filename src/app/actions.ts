@@ -74,13 +74,13 @@ export async function unpackDocx(
         currentDir = nextDir;
       }
       
-      const fileName = pathParts[pathParts.length - 1];
-      const mimeType = getMimeType(fileName);
+      const entryFileName = pathParts[pathParts.length - 1];
+      const mimeType = getMimeType(entryFileName);
       const isText = mimeType?.includes("xml") || mimeType?.includes("text") || !mimeType;
 
 
       const fileNode: UnpackedFile = {
-        name: fileName,
+        name: entryFileName,
         path: zipEntry.name,
         type: "file",
         mimeType,
