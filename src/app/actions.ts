@@ -24,7 +24,7 @@ function getMimeType(filename: string): string | undefined {
 }
 
 export async function unpackDocx(
-  { fileBuffer, fileName }: { fileBuffer: ArrayBuffer, fileName: string }
+  fileBuffer: ArrayBuffer
 ): Promise<{ error?: string; files?: UnpackedFile[] }> {
 
   if (!fileBuffer) {
@@ -33,9 +33,8 @@ export async function unpackDocx(
 
   try {
     const zip = await JSZip.loadAsync(fileBuffer);
-
     const root: UnpackedFile = {
-      name: fileName,
+      name: "root", // a temporary root
       path: "",
       type: "directory",
       children: [],

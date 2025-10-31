@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Spinner } from "./icons";
 import type { Dictionary } from "@/get-dictionary";
+import { unpackDocx } from "@/app/actions";
 
 export default function DocxUnpacker({ dictionary }: { dictionary: Dictionary['docxUnpacker'] }) {
   const [unpackedContent, setUnpackedContent] = useState<UnpackedFile[] | null>(
@@ -30,19 +31,8 @@ export default function DocxUnpacker({ dictionary }: { dictionary: Dictionary['d
     setFileName(file.name);
 
     try {
-      const formData = new FormData();
-      formData.append('file', file);
-      
-      const response = await fetch('/api/unpack', {
-          method: 'POST',
-          body: formData,
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || `HTTP error! status: ${response.status}`);
-      }
+        const fileBuffer = await file.arrayBuffer();
+        const result = await unpackDocx(fileBuffer);
 
       if (result.error) {
         setError(result.error);
