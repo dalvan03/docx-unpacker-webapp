@@ -36,7 +36,7 @@ export function FileViewer({ file }: { file: UnpackedFile | null }) {
     
     // Naive XML to text conversion for preview
     const simplePreview = isPreviewableXml
-      ? file.content?.replace(/<[^>]+>/g, ' ').replace(/\s\s+/g, ' ').trim()
+      ? file.content?.match(/<w:t>.*?<\/w:t>/g)?.map(t => t.replace(/<[^>]+>/g, '')).join('')
       : null;
       
     if (isPreviewableXml && simplePreview) {
