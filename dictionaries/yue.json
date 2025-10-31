@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "Docx 解包器 | 免費在線查看同提取 .docx 文件嘅工具",
+    "description": "即刻解包、查看同下載你嘅 .docx 文件內容。直接喺你嘅瀏覽器入面探索任何 Word 文件入面嘅原始 XML 同媒體文件。唔需要安裝任何軟件。",
+    "keywords": ["docx 解包器", "docx 檢視器", "提取 docx", "在線打開 docx", "docx 轉 xml", "查看 word 文件內容", "免費 docx 工具"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Docx 解包器工具界面"
+  },
+  "page": {
+    "title": "Docx 解包器",
+    "footer": "用 Next.js 同 Tailwind CSS 整嘅。輕鬆解包 .docx 文件。"
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "正在解包你嘅文件...",
+    "errorTitle": "發生錯誤",
+    "tryAgain": "再試一次",
+    "contentsOf": "嘅內容",
+    "startOver": "重新開始",
+    "downloadAll": "全部下載 (.zip)",
+    "fileStructure": "文件結構",
+    "fileReadError": "讀取或處理文件失敗。",
+    "unknownError": "發生未知錯誤。",
+    "fileUpload": {
+      "title": "將你嘅 .docx 文件拖到呢度",
+      "subtitle": "或者點擊下面從你嘅電腦揀個文件",
+      "button": "瀏覽文件",
+      "validationError": "請上傳一個 .docx 文件。"
+    },
+    "fileViewer": {
+        "selectFileTitle": "揀個文件",
+        "selectFileSubtitle": "喺結構中點擊一個文件嚟查看佢嘅內容。",
+        "previewTab": "預覽",
+        "rawXmlTab": "原始 XML",
+        "noPreviewTitle": "冇預覽",
+        "noPreviewSubtitle": "無法顯示呢種文件類型嘅預覽。"
+    }
+  }
+}

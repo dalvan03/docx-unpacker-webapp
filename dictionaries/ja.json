@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "Docxアンパッカー | .docxファイルを表示および抽出するための無料オンラインツール",
+    "description": ".docxファイルの内容を即座に展開、表示、ダウンロードします。ブラウザで直接、Word文書内の生のXMLファイルやメディアファイルを探索できます。ソフトウェアのインストールは不要です。",
+    "keywords": ["docxアンパッカー", "docxビューア", "docx抽出", "docxをオンラインで開く", "docxからxmlへ", "Word文書の内容を表示", "無料docxツール"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Docxアンパッカーツールのインターフェース"
+  },
+  "page": {
+    "title": "Docxアンパッカー",
+    "footer": "Next.jsとTailwind CSSで構築。docxファイルを簡単に展開できます。"
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "ドキュメントを展開しています...",
+    "errorTitle": "エラーが発生しました",
+    "tryAgain": "再試行",
+    "contentsOf": "のコンテンツ",
+    "startOver": "最初からやり直す",
+    "downloadAll": "すべてダウンロード (.zip)",
+    "fileStructure": "ファイル構造",
+    "fileReadError": "ファイルの読み取りまたは処理に失敗しました。",
+    "unknownError": "不明なエラーが発生しました。",
+    "fileUpload": {
+      "title": ".docxファイルをここにドロップしてください",
+      "subtitle": "または以下をクリックしてコンピュータからファイルを選択してください",
+      "button": "ファイルを参照",
+      "validationError": ".docxファイルをアップロードしてください。"
+    },
+    "fileViewer": {
+        "selectFileTitle": "ファイルを選択",
+        "selectFileSubtitle": "構造内のファイルをクリックして、その内容を表示します。",
+        "previewTab": "プレビュー",
+        "rawXmlTab": "生のXML",
+        "noPreviewTitle": "プレビューはありません",
+        "noPreviewSubtitle": "このファイルタイプのプレビューは表示できません。"
+    }
+  }
+}

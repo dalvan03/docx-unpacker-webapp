@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "Docx Unpacker | Free Online Tool to See & Comot .docx Files",
+    "description": "Sharp-sharp unpack, see, and download di contents of your .docx files. Check di raw XML and media files inside any Word document straight from your browser. No need to install any software.",
+    "keywords": ["docx unpacker", "docx viewer", "comot docx", "open docx online", "docx to xml", "see word document contents", "free docx tool"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Docx Unpacker Tool Interface"
+  },
+  "page": {
+    "title": "Docx Unpacker",
+    "footer": "Dem build am with Next.js and Tailwind CSS. Unpack .docx files with ease."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Dey unpack your document...",
+    "errorTitle": "Wahala Don Happen",
+    "tryAgain": "Try Again",
+    "contentsOf": "Contents of",
+    "startOver": "Start Over",
+    "downloadAll": "Download All (.zip)",
+    "fileStructure": "File Structure",
+    "fileReadError": "To read or process di file fail.",
+    "unknownError": "Unknown wahala happen.",
+    "fileUpload": {
+      "title": "Drop your .docx file here",
+      "subtitle": "or click below make you select file from your computer",
+      "button": "Browse Files",
+      "validationError": "Abeg, upload .docx file."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Select a file",
+        "selectFileSubtitle": "Click on a file for di structure to see wetin dey inside.",
+        "previewTab": "Preview",
+        "rawXmlTab": "Raw XML",
+        "noPreviewTitle": "No preview dey",
+        "noPreviewSubtitle": "We no fit show preview for dis kain file."
+    }
+  }
+}

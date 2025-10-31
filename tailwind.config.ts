@@ -14,6 +14,13 @@ export default {
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
         arabic: ['Noto Sans Arabic', 'sans-serif'],
+        hindi: ['Noto Sans Devanagari', 'sans-serif'],
+        bengali: ['Noto Sans Bengali', 'sans-serif'],
+        tamil: ['Noto Sans Tamil', 'sans-serif'],
+        telugu: ['Noto Sans Telugu', 'sans-serif'],
+        urdu: ['Noto Naskh Arabic', 'sans-serif'],
+        japanese: ['Noto Sans JP', 'sans-serif'],
+        chinese: ['Noto Sans SC', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

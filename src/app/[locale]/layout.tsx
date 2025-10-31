@@ -61,7 +61,35 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: Locale };
 }>) {
-  const isRtl = params.locale === 'ar';
+  const isRtl = params.locale === 'ar' || params.locale === 'ur' || params.locale === 'arz';
+  
+  const getFontFamily = (locale: Locale) => {
+    switch (locale) {
+      case 'ar':
+      case 'arz':
+        return 'font-arabic';
+      case 'hi':
+        return 'font-hindi';
+      case 'bn':
+        return 'font-bengali';
+      case 'ta':
+        return 'font-tamil';
+      case 'te':
+        return 'font-telugu';
+      case 'ur':
+        return 'font-urdu';
+      case 'ja':
+        return 'font-japanese';
+      case 'zh':
+      case 'yue':
+        return 'font-chinese';
+      default:
+        return 'font-body';
+    }
+  };
+
+  const fontClass = getFontFamily(params.locale);
+
   return (
     <html lang={params.locale} dir={isRtl ? 'rtl' : 'ltr'}>
       <head>
@@ -69,8 +97,16 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet" />
+
       </head>
-      <body className={`font-body antialiased ${isRtl ? 'font-arabic' : ''}`}>
+      <body className={`antialiased ${fontClass}`}>
           {children}
           <Toaster />
       </body>

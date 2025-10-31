@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "Pembongkar Docx | Alat Online Gratis untuk Melihat & Mengekstrak File .docx",
+    "description": "Bongkar, lihat, dan unduh konten file .docx Anda secara instan. Jelajahi file XML mentah dan file media di dalam dokumen Word apa pun langsung di browser Anda. Tidak perlu instalasi perangkat lunak.",
+    "keywords": ["pembongkar docx", "penampil docx", "ekstrak docx", "buka docx online", "docx ke xml", "lihat konten dokumen word", "alat docx gratis"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Antarmuka Alat Pembongkar Docx"
+  },
+  "page": {
+    "title": "Pembongkar Docx",
+    "footer": "Dibuat dengan Next.js dan Tailwind CSS. Bongkar file .docx dengan mudah."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Membongkar dokumen Anda...",
+    "errorTitle": "Terjadi Kesalahan",
+    "tryAgain": "Coba Lagi",
+    "contentsOf": "Isi dari",
+    "startOver": "Mulai dari Awal",
+    "downloadAll": "Unduh Semua (.zip)",
+    "fileStructure": "Struktur File",
+    "fileReadError": "Gagal membaca atau memproses file.",
+    "unknownError": "Terjadi kesalahan yang tidak diketahui.",
+    "fileUpload": {
+      "title": "Letakkan file .docx Anda di sini",
+      "subtitle": "atau klik di bawah untuk memilih file dari komputer Anda",
+      "button": "Jelajahi File",
+      "validationError": "Harap unggah file .docx."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Pilih file",
+        "selectFileSubtitle": "Klik pada file dalam struktur untuk melihat isinya.",
+        "previewTab": "Pratinjau",
+        "rawXmlTab": "XML Mentah",
+        "noPreviewTitle": "Tidak ada pratinjau yang tersedia",
+        "noPreviewSubtitle": "Tidak dapat menampilkan pratinjau untuk jenis file ini."
+    }
+  }
+}

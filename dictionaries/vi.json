@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "Trình giải nén Docx | Công cụ trực tuyến miễn phí để xem và giải nén tệp .docx",
+    "description": "Giải nén, xem và tải xuống nội dung của các tệp .docx của bạn ngay lập tức. Khám phá các tệp XML thô và tệp phương tiện trong bất kỳ tài liệu Word nào ngay trong trình duyệt của bạn. Không cần cài đặt phần mềm.",
+    "keywords": ["trình giải nén docx", "trình xem docx", "giải nén docx", "mở docx trực tuyến", "docx sang xml", "xem nội dung tài liệu word", "công cụ docx miễn phí"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Giao diện Công cụ Trình giải nén Docx"
+  },
+  "page": {
+    "title": "Trình giải nén Docx",
+    "footer": "Được xây dựng bằng Next.js và Tailwind CSS. Giải nén tệp .docx một cách dễ dàng."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Đang giải nén tài liệu của bạn...",
+    "errorTitle": "Đã xảy ra lỗi",
+    "tryAgain": "Thử lại",
+    "contentsOf": "Nội dung của",
+    "startOver": "Bắt đầu lại",
+    "downloadAll": "Tải xuống tất cả (.zip)",
+    "fileStructure": "Cấu trúc tệp",
+    "fileReadError": "Không thể đọc hoặc xử lý tệp.",
+    "unknownError": "Đã xảy ra lỗi không xác định.",
+    "fileUpload": {
+      "title": "Thả tệp .docx của bạn vào đây",
+      "subtitle": "hoặc nhấp vào bên dưới để chọn một tệp từ máy tính của bạn",
+      "button": "Duyệt tệp",
+      "validationError": "Vui lòng tải lên một tệp .docx."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Chọn một tệp",
+        "selectFileSubtitle": "Nhấp vào một tệp trong cấu trúc để xem nội dung của nó.",
+        "previewTab": "Xem trước",
+        "rawXmlTab": "XML thô",
+        "noPreviewTitle": "Không có bản xem trước",
+        "noPreviewSubtitle": "Không thể hiển thị bản xem trước cho loại tệp này."
+    }
+  }
+}

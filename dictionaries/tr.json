@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "Docx Paket Açıcı | .docx Dosyalarını Görüntülemek ve Çıkarmak için Ücretsiz Çevrimiçi Araç",
+    "description": ".docx dosyalarınızın içeriğini anında açın, görüntüleyin ve indirin. Herhangi bir Word belgesindeki ham XML ve medya dosyalarını doğrudan tarayıcınızda keşfedin. Yazılım kurulumu gerekmez.",
+    "keywords": ["docx paket açıcı", "docx görüntüleyici", "docx çıkar", "docx çevrimiçi aç", "docx'ten xml'e", "word belgesi içeriğini görüntüle", "ücretsiz docx aracı"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Docx Paket Açıcı Aracı Arayüzü"
+  },
+  "page": {
+    "title": "Docx Paket Açıcı",
+    "footer": "Next.js ve Tailwind CSS ile oluşturuldu. .docx dosyalarını kolayca açın."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Belgeniz açılıyor...",
+    "errorTitle": "Bir Hata Oluştu",
+    "tryAgain": "Tekrar Dene",
+    "contentsOf": "İçeriği",
+    "startOver": "Baştan Başla",
+    "downloadAll": "Tümünü İndir (.zip)",
+    "fileStructure": "Dosya Yapısı",
+    "fileReadError": "Dosya okunamadı veya işlenemedi.",
+    "unknownError": "Bilinmeyen bir hata oluştu.",
+    "fileUpload": {
+      "title": ".docx dosyanızı buraya bırakın",
+      "subtitle": "veya bilgisayarınızdan bir dosya seçmek için aşağıya tıklayın",
+      "button": "Dosyalara Göz At",
+      "validationError": "Lütfen bir .docx dosyası yükleyin."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Bir dosya seçin",
+        "selectFileSubtitle": "İçeriğini görüntülemek için yapıdaki bir dosyaya tıklayın.",
+        "previewTab": "Önizleme",
+        "rawXmlTab": "Ham XML",
+        "noPreviewTitle": "Önizleme yok",
+        "noPreviewSubtitle": "Bu dosya türü için bir önizleme görüntülenemiyor."
+    }
+  }
+}

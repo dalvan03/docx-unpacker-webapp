@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "Docx Unpacker | .docx فائلوں کو دیکھنے اور نکالنے کے لیے مفت آن لائن ٹول",
+    "description": "فوری طور پر اپنی .docx فائلوں کے مواد کو ان پیک کریں، دیکھیں اور ڈاؤن لوڈ کریں۔ کسی بھی ورڈ دستاویز کے اندر خام XML اور میڈیا فائلوں کو براہ راست اپنے براؤزر میں دریافت کریں۔ کسی سافٹ ویئر کی تنصیب کی ضرورت نہیں ہے۔",
+    "keywords": ["docx unpacker", "docx viewer", "extract docx", "open docx online", "docx to xml", "view word document contents", "free docx tool"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Docx Unpacker ٹول انٹرفیس"
+  },
+  "page": {
+    "title": "Docx Unpacker",
+    "footer": "Next.js اور Tailwind CSS کے ساتھ بنایا گیا۔ آسانی سے .docx فائلوں کو ان پیک کریں۔"
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "آپ کی دستاویز کو ان پیک کیا جا رہا ہے...",
+    "errorTitle": "ایک خرابی پیش آگئی",
+    "tryAgain": "دوبارہ کوشش کریں",
+    "contentsOf": "کے مشمولات",
+    "startOver": "دوبارہ شروع کریں",
+    "downloadAll": "سب ڈاؤن لوڈ کریں (.zip)",
+    "fileStructure": "فائل کی ساخت",
+    "fileReadError": "فائل کو پڑھنے یا اس پر کارروائی کرنے میں ناکام۔",
+    "unknownError": "ایک نامعلوم خرابی پیش آگئی۔",
+    "fileUpload": {
+      "title": "اپنی .docx فائل یہاں ڈراپ کریں",
+      "subtitle": "یا اپنے کمپیوٹر سے فائل منتخب کرنے کے لیے نیچے کلک کریں",
+      "button": "فائلیں براؤز کریں",
+      "validationError": "براہ کرم ایک .docx فائل اپ لوڈ کریں۔"
+    },
+    "fileViewer": {
+        "selectFileTitle": "ایک فائل منتخب کریں",
+        "selectFileSubtitle": "اس کے مواد کو دیکھنے کے لیے ساخت میں ایک فائل پر کلک کریں۔",
+        "previewTab": "پیش نظارہ",
+        "rawXmlTab": "خام XML",
+        "noPreviewTitle": "کوئی پیش نظارہ دستیاب نہیں",
+        "noPreviewSubtitle": "اس فائل کی قسم کے لیے پیش نظارہ نہیں دکھا سکتا۔"
+    }
+  }
+}

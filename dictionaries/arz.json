@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "فاكك Docx | أداة مجانية على الإنترنت لعرض واستخراج ملفات .docx",
+    "description": "فك وعرض وتنزيل محتويات ملفات .docx الخاصة بك على الفور. استكشف ملفات XML الأولية وملفات الوسائط داخل أي مستند Word مباشرة في متصفحك. لا يلزم تثبيت أي برنامج.",
+    "keywords": ["فاكك docx", "عارض docx", "استخراج docx", "فتح docx على الإنترنت", "docx إلى xml", "عرض محتويات مستند word", "أداة docx مجانية"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "واجهة أداة فاكك Docx"
+  },
+  "page": {
+    "title": "فاكك Docx",
+    "footer": "مصنوع بـ Next.js و Tailwind CSS. فك ملفات .docx بسهولة."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "جاري فك ضغط مستندك...",
+    "errorTitle": "حدث خطأ",
+    "tryAgain": "حاول مرة أخرى",
+    "contentsOf": "محتويات",
+    "startOver": "ابدأ من جديد",
+    "downloadAll": "تنزيل الكل (.zip)",
+    "fileStructure": "هيكل الملف",
+    "fileReadError": "فشل في قراءة أو معالجة الملف.",
+    "unknownError": "حدث خطأ غير معروف.",
+    "fileUpload": {
+      "title": "اسحب ملف .docx الخاص بك هنا",
+      "subtitle": "أو انقر أدناه لتحديد ملف من جهاز الكمبيوتر الخاص بك",
+      "button": "تصفح الملفات",
+      "validationError": "من فضلك قم بتحميل ملف .docx."
+    },
+    "fileViewer": {
+        "selectFileTitle": "اختر ملفًا",
+        "selectFileSubtitle": "انقر فوق ملف في الهيكل لعرض محتوياته.",
+        "previewTab": "معاينة",
+        "rawXmlTab": "XML خام",
+        "noPreviewTitle": "لا توجد معاينة متاحة",
+        "noPreviewSubtitle": "لا يمكن عرض معاينة لهذا النوع من الملفات."
+    }
+  }
+}
