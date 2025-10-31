@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "Docx Unpacker | Gratis Online Tool om .docx-bestanden te Bekijken & Uit te Pakken",
+    "description": "Pak direct de inhoud van uw .docx-bestanden uit, bekijk en download deze. Verken de onbewerkte XML- en mediabestanden in elk Word-document rechtstreeks in uw browser. Geen software-installatie vereist.",
+    "keywords": ["docx unpacker", "docx viewer", "docx uitpakken", "docx online openen", "docx naar xml", "inhoud word-document bekijken", "gratis docx-tool"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Docx Unpacker Tool Interface"
+  },
+  "page": {
+    "title": "Docx Unpacker",
+    "footer": "Gebouwd met Next.js en Tailwind CSS. Pak .docx-bestanden gemakkelijk uit."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Uw document wordt uitgepakt...",
+    "errorTitle": "Er is een Fout Opgetreden",
+    "tryAgain": "Probeer Opnieuw",
+    "contentsOf": "Inhoud van",
+    "startOver": "Begin Opnieuw",
+    "downloadAll": "Alles Downloaden (.zip)",
+    "fileStructure": "Bestandsstructuur",
+    "fileReadError": "Kan het bestand niet lezen of verwerken.",
+    "unknownError": "Er is een onbekende fout opgetreden.",
+    "fileUpload": {
+      "title": "Sleep uw .docx-bestand hierheen",
+      "subtitle": "of klik hieronder om een bestand van uw computer te selecteren",
+      "button": "Bestanden Zoeken",
+      "validationError": "Upload alstublieft een .docx-bestand."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Selecteer een bestand",
+        "selectFileSubtitle": "Klik op een bestand in de structuur om de inhoud te bekijken.",
+        "previewTab": "Voorbeeld",
+        "rawXmlTab": "Ruwe XML",
+        "noPreviewTitle": "Geen voorbeeld beschikbaar",
+        "noPreviewSubtitle": "Kan geen voorbeeld weergeven voor dit bestandstype."
+    }
+  }
+}

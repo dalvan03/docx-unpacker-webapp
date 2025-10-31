@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "Docx Entpacker | Kostenloses Online-Tool zum Anzeigen und Extrahieren von .docx-Dateien",
+    "description": "Entpacken, sehen und laden Sie den Inhalt Ihrer .docx-Dateien sofort herunter. Erkunden Sie die rohen XML- und Mediendateien in jedem Word-Dokument direkt in Ihrem Browser. Keine Softwareinstallation erforderlich.",
+    "keywords": ["docx entpacker", "docx viewer", "docx extrahieren", "docx online öffnen", "docx zu xml", "word-dokumentinhalt anzeigen", "kostenloses docx-tool"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Benutzeroberfläche des Docx Entpacker-Tools"
+  },
+  "page": {
+    "title": "Docx Entpacker",
+    "footer": "Erstellt mit Next.js und Tailwind CSS. Entpacken Sie .docx-Dateien mit Leichtigkeit."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Entpacke Ihr Dokument...",
+    "errorTitle": "Ein Fehler ist Aufgetreten",
+    "tryAgain": "Erneut Versuchen",
+    "contentsOf": "Inhalt von",
+    "startOver": "Von Vorne Beginnen",
+    "downloadAll": "Alles Herunterladen (.zip)",
+    "fileStructure": "Dateistruktur",
+    "fileReadError": "Fehler beim Lesen oder Verarbeiten der Datei.",
+    "unknownError": "Ein unbekannter Fehler ist aufgetreten.",
+    "fileUpload": {
+      "title": "Ziehen Sie Ihre .docx-Datei hierher",
+      "subtitle": "oder klicken Sie unten, um eine Datei von Ihrem Computer auszuwählen",
+      "button": "Dateien Durchsuchen",
+      "validationError": "Bitte laden Sie eine .docx-Datei hoch."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Wählen Sie eine Datei aus",
+        "selectFileSubtitle": "Klicken Sie auf eine Datei in der Struktur, um deren Inhalt anzuzeigen.",
+        "previewTab": "Vorschau",
+        "rawXmlTab": "Rohes XML",
+        "noPreviewTitle": "Keine Vorschau verfügbar",
+        "noPreviewSubtitle": "Für diesen Dateityp kann keine Vorschau angezeigt werden."
+    }
+  }
+}

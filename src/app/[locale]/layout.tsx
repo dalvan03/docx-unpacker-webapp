@@ -48,6 +48,9 @@ export async function generateMetadata(
         'zh-CN': `${metadata.url}/zh`,
         'ru-RU': `${metadata.url}/ru`,
         'ar-AE': `${metadata.url}/ar`,
+        'fr-FR': `${metadata.url}/fr`,
+        'de-DE': `${metadata.url}/de`,
+        'nl-NL': `${metadata.url}/nl`,
       },
     },
   };

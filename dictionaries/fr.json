@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Décompresseur Docx | Outil en Ligne Gratuit pour Voir et Extraire des Fichiers .docx",
+    "description": "Décompressez, visualisez et téléchargez instantanément le contenu de vos fichiers .docx. Explorez les fichiers XML bruts et les fichiers multimédias de n'importe quel document Word directement dans votre navigateur. Aucune installation de logiciel n'est requise.",
+    "keywords": ["décompresseur docx", "visionneuse docx", "extraire docx", "ouvrir docx en ligne", "docx vers xml", "voir le contenu d'un document word", "outil docx gratuit"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Interface de l'Outil Décompresseur Docx"
+  },
+  "page": {
+    "title": "Décompresseur Docx",
+    "footer": "Construit avec Next.js et Tailwind CSS. Décompressez facilement les fichiers .docx."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Décompression de votre document...",
+    "errorTitle": "Une Erreur s'est Produite",
+    "tryAgain": "Réessayer",
+    "contentsOf": "Contenu de",
+    "startOver": "Recommencer",
+    "downloadAll": "Tout Télécharger (.zip)",
+    "fileStructure": "Structure des Fichiers",
+    "fileReadError": "Échec de la lecture ou du traitement du fichier.",
+    "unknownError": "Une erreur inconnue s'est produite.",
+    "fileUpload": {
+      "title": "Déposez votre fichier .docx ici",
+      "subtitle": "ou cliquez ci-dessous pour sélectionner un fichier depuis votre ordinateur",
+      "button": "Parcourir les Fichiers",
+      "validationError": "Veuillez télécharger un fichier .docx."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Sélectionnez un fichier",
+        "selectFileSubtitle": "Cliquez sur un fichier dans la structure pour voir son contenu.",
+        "previewTab": "Aperçu",
+        "rawXmlTab": "XML Brut",
+        "noPreviewTitle": "Aucun aperçu disponible",
+        "noPreviewSubtitle": "Impossible d'afficher un aperçu pour ce type de fichier."
+    }
+  }
+}
