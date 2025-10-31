@@ -4,6 +4,7 @@ import { PackageOpen } from "lucide-react";
 import { getDictionary } from '@/get-dictionary'
 import { Locale } from '../../../i18n-config';
 import { Separator } from "@/components/ui/separator";
+import LanguageSwitcher from "@/components/language-switcher";
 
 export default async function Home({ params: { locale } }: { params: { locale: Locale } }) {
   const dictionary = await getDictionary(locale);
@@ -28,8 +29,9 @@ export default async function Home({ params: { locale } }: { params: { locale: L
         <Faq dictionary={dictionary} />
       </main>
       <footer className="py-4 border-t mt-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-muted-foreground">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>{dictionary.page.footer}</p>
+          <LanguageSwitcher />
         </div>
       </footer>
     </div>
