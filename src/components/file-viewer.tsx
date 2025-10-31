@@ -5,6 +5,7 @@ import { ScrollArea } from "./ui/scroll-area";
 import Image from "next/image";
 import { FileQuestion, Code, Eye } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
+import type { Dictionary } from "@/get-dictionary";
 
 function formatXml(xml: string) {
     const PADDING = ' '.repeat(2);
@@ -23,13 +24,13 @@ function formatXml(xml: string) {
 };
 
 
-export function FileViewer({ file }: { file: UnpackedFile | null }) {
+export function FileViewer({ file, dictionary }: { file: UnpackedFile | null, dictionary: Dictionary['docxUnpacker']['fileViewer'] }) {
   if (!file) {
     return (
       <div className="h-full flex flex-col items-center justify-center text-center text-muted-foreground p-8">
         <FileQuestion className="h-16 w-16 mb-4" />
-        <h3 className="text-xl font-semibold">Select a file</h3>
-        <p>Click on a file in the structure to view its contents.</p>
+        <h3 className="text-xl font-semibold">{dictionary.selectFileTitle}</h3>
+        <p>{dictionary.selectFileSubtitle}</p>
       </div>
     );
   }
@@ -62,8 +63,8 @@ export function FileViewer({ file }: { file: UnpackedFile | null }) {
             <Tabs defaultValue="preview" className="h-full flex flex-col">
                 <div className="px-4 pt-4">
                     <TabsList>
-                        <TabsTrigger value="preview"><Eye className="mr-2 h-4 w-4"/>Preview</TabsTrigger>
-                        <TabsTrigger value="raw"><Code className="mr-2 h-4 w-4"/>Raw XML</TabsTrigger>
+                        <TabsTrigger value="preview"><Eye className="mr-2 h-4 w-4"/>{dictionary.previewTab}</TabsTrigger>
+                        <TabsTrigger value="raw"><Code className="mr-2 h-4 w-4"/>{dictionary.rawXmlTab}</TabsTrigger>
                     </TabsList>
                 </div>
                 <TabsContent value="preview" className="flex-grow overflow-hidden m-0">
@@ -95,8 +96,8 @@ export function FileViewer({ file }: { file: UnpackedFile | null }) {
     return (
         <div className="h-full flex flex-col items-center justify-center text-center text-muted-foreground p-8">
             <FileQuestion className="h-16 w-16 mb-4" />
-            <h3 className="text-xl font-semibold">No preview available</h3>
-            <p>Cannot display a preview for this file type.</p>
+            <h3 className="text-xl font-semibold">{dictionary.noPreviewTitle}</h3>
+            <p>{dictionary.noPreviewSubtitle}</p>
         </div>
     )
   };

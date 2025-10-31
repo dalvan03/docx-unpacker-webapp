@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Docx Unpacker | Free Online Tool to View & Extract .docx Files",
+    "description": "Instantly unpack, view, and download the contents of your .docx files. Explore the raw XML and media files within any Word document right in your browser. No software installation required.",
+    "keywords": ["docx unpacker", "docx viewer", "extract docx", "open docx online", "docx to xml", "view word document contents", "free docx tool"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Docx Unpacker Tool Interface"
+  },
+  "page": {
+    "title": "Docx Unpacker",
+    "footer": "Built with Next.js and Tailwind CSS. Unpack .docx files with ease."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Unpacking your document...",
+    "errorTitle": "An Error Occurred",
+    "tryAgain": "Try Again",
+    "contentsOf": "Contents of",
+    "startOver": "Start Over",
+    "downloadAll": "Download All (.zip)",
+    "fileStructure": "File Structure",
+    "fileReadError": "Failed to read or process the file.",
+    "unknownError": "An unknown error occurred.",
+    "fileUpload": {
+      "title": "Drop your .docx file here",
+      "subtitle": "or click below to select a file from your computer",
+      "button": "Browse Files",
+      "validationError": "Please upload a .docx file."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Select a file",
+        "selectFileSubtitle": "Click on a file in the structure to view its contents.",
+        "previewTab": "Preview",
+        "rawXmlTab": "Raw XML",
+        "noPreviewTitle": "No preview available",
+        "noPreviewSubtitle": "Cannot display a preview for this file type."
+    }
+  }
+}

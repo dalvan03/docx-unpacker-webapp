@@ -4,13 +4,15 @@ import { useState, useCallback, type DragEvent, useRef } from 'react';
 import { UploadCloud } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
+import type { Dictionary } from '@/get-dictionary';
 
 interface FileUploadProps {
   onFileSelect: (file: File) => void;
   isLoading: boolean;
+  dictionary: Dictionary['docxUnpacker']['fileUpload'];
 }
 
-export function FileUpload({ onFileSelect, isLoading }: FileUploadProps) {
+export function FileUpload({ onFileSelect, isLoading, dictionary }: FileUploadProps) {
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -18,10 +20,9 @@ export function FileUpload({ onFileSelect, isLoading }: FileUploadProps) {
     if (file && file.name.endsWith('.docx')) {
       onFileSelect(file);
     } else {
-      // Basic validation feedback, could be improved with toasts
-      alert('Please upload a .docx file.');
+      alert(dictionary.validationError);
     }
-  }, [onFileSelect]);
+  }, [onFileSelect, dictionary.validationError]);
 
   const onDragOver = (e: DragEvent<HTMLDivElement>) => {
     e.preventDefault();
@@ -65,8 +66,8 @@ export function FileUpload({ onFileSelect, isLoading }: FileUploadProps) {
       <div className="flex flex-col items-center justify-center space-y-4">
         <UploadCloud className={cn("h-16 w-16", isDragging ? "text-primary animate-bounce" : "text-muted-foreground")} />
         <div className="space-y-2">
-            <h3 className="text-2xl font-semibold">Drop your .docx file here</h3>
-            <p className="text-muted-foreground">or click below to select a file from your computer</p>
+            <h3 className="text-2xl font-semibold">{dictionary.title}</h3>
+            <p className="text-muted-foreground">{dictionary.subtitle}</p>
         </div>
         <input
             type="file"
@@ -77,7 +78,7 @@ export function FileUpload({ onFileSelect, isLoading }: FileUploadProps) {
             disabled={isLoading}
         />
         <Button onClick={onBrowseClick} disabled={isLoading} size="lg">
-            Browse Files
+            {dictionary.button}
         </Button>
       </div>
     </div>

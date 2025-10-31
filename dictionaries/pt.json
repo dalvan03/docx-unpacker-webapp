@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Descompactador Docx | Ferramenta Online Grátis para Ver e Extrair Arquivos .docx",
+    "description": "Descompacte, visualize e baixe o conteúdo dos seus arquivos .docx instantaneamente. Explore os arquivos XML brutos e mídias de qualquer documento do Word diretamente no seu navegador. Nenhuma instalação de software necessária.",
+    "keywords": ["descompactador docx", "visualizador docx", "extrair docx", "abrir docx online", "docx para xml", "ver conteúdo de documento word", "ferramenta docx grátis"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Interface da Ferramenta Descompactador Docx"
+  },
+  "page": {
+    "title": "Descompactador Docx",
+    "footer": "Construído com Next.js e Tailwind CSS. Descompacte arquivos .docx com facilidade."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Descompactando seu documento...",
+    "errorTitle": "Ocorreu um Erro",
+    "tryAgain": "Tentar Novamente",
+    "contentsOf": "Conteúdo de",
+    "startOver": "Começar de Novo",
+    "downloadAll": "Baixar Tudo (.zip)",
+    "fileStructure": "Estrutura de Arquivos",
+    "fileReadError": "Falha ao ler ou processar o arquivo.",
+    "unknownError": "Ocorreu um erro desconhecido.",
+    "fileUpload": {
+      "title": "Arraste seu arquivo .docx aqui",
+      "subtitle": "ou clique abaixo para selecionar um arquivo do seu computador",
+      "button": "Procurar Arquivos",
+      "validationError": "Por favor, envie um arquivo .docx."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Selecione um arquivo",
+        "selectFileSubtitle": "Clique em um arquivo na estrutura para ver seu conteúdo.",
+        "previewTab": "Visualização",
+        "rawXmlTab": "XML Bruto",
+        "noPreviewTitle": "Nenhuma visualização disponível",
+        "noPreviewSubtitle": "Não é possível exibir uma visualização para este tipo de arquivo."
+    }
+  }
+}

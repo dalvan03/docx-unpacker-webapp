@@ -11,8 +11,9 @@ import { FileViewer } from "@/components/file-viewer";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Spinner } from "./icons";
+import type { Dictionary } from "@/get-dictionary";
 
-export default function DocxUnpacker() {
+export default function DocxUnpacker({ dictionary }: { dictionary: Dictionary['docxUnpacker'] }) {
   const [unpackedContent, setUnpackedContent] = useState<UnpackedFile[] | null>(
     null
   );
@@ -50,8 +51,8 @@ export default function DocxUnpacker() {
       }
     } catch (e: unknown) {
         console.error("Error processing file:", e);
-        const errorMessage = e instanceof Error ? e.message : "An unknown error occurred.";
-        setError(`Failed to read or process the file. ${errorMessage}`);
+        const errorMessage = e instanceof Error ? e.message : dictionary.unknownError;
+        setError(`${dictionary.fileReadError} ${errorMessage}`);
     } finally {
         setIsLoading(false);
     }
@@ -101,7 +102,7 @@ export default function DocxUnpacker() {
   if (!unpackedContent && !isLoading && !error) {
     return (
       <div className="container mx-auto p-4 sm:p-6 lg:p-8 flex-grow flex items-center justify-center">
-        <FileUpload onFileSelect={handleFileSelect} isLoading={isLoading} />
+        <FileUpload onFileSelect={handleFileSelect} isLoading={isLoading} dictionary={dictionary.fileUpload} />
       </div>
     );
   }
@@ -114,18 +115,18 @@ export default function DocxUnpacker() {
             <div className="flex flex-col items-center gap-4 p-8 bg-card rounded-lg shadow-2xl">
               <Spinner className="h-12 w-12 text-primary" />
               <p className="text-lg font-medium text-foreground">
-                Unpacking your document...
+                {dictionary.unpackingMessage}
               </p>
             </div>
           )}
           {error && (
              <Alert variant="destructive" className="max-w-md">
                 <AlertCircle className="h-4 w-4" />
-                <AlertTitle>An Error Occurred</AlertTitle>
+                <AlertTitle>{dictionary.errorTitle}</AlertTitle>
                 <AlertDescription>
                     {error}
                 </AlertDescription>
-                <Button variant="outline" size="sm" onClick={handleReset} className="mt-4">Try Again</Button>
+                <Button variant="outline" size="sm" onClick={handleReset} className="mt-4">{dictionary.tryAgain}</Button>
             </Alert>
           )}
         </div>
@@ -134,21 +135,21 @@ export default function DocxUnpacker() {
       {unpackedContent && (
         <>
           <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-            <h2 className="text-xl font-semibold truncate" title={fileName}>Contents of: <span className="text-primary">{fileName}</span></h2>
+            <h2 className="text-xl font-semibold truncate" title={fileName}>{dictionary.contentsOf}: <span className="text-primary">{fileName}</span></h2>
             <div className="flex items-center gap-2">
               <Button onClick={handleReset} variant="outline">
                 <RotateCcw className="mr-2 h-4 w-4" />
-                Start Over
+                {dictionary.startOver}
               </Button>
               <Button onClick={handleDownload}>
                 <Download className="mr-2 h-4 w-4" />
-                Download All (.zip)
+                {dictionary.downloadAll}
               </Button>
             </div>
           </div>
           <div className="flex-grow grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 min-h-[60vh]">
             <aside className="md:col-span-1 lg:col-span-1 bg-card p-4 rounded-lg border overflow-y-auto">
-              <h3 className="text-lg font-semibold mb-2">File Structure</h3>
+              <h3 className="text-lg font-semibold mb-2">{dictionary.fileStructure}</h3>
               <FileTree
                 files={unpackedContent}
                 onSelect={setSelectedFile}
@@ -156,7 +157,7 @@ export default function DocxUnpacker() {
               />
             </aside>
             <section className="md:col-span-2 lg:col-span-3 bg-card rounded-lg border overflow-hidden">
-              <FileViewer file={selectedFile} />
+              <FileViewer file={selectedFile} dictionary={dictionary.fileViewer} />
             </section>
           </div>
         </>
