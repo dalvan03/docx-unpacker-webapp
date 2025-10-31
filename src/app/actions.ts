@@ -61,26 +61,33 @@ export async function unpackDocx(
 
       const pathParts = zipEntry.name.split("/").filter(p => p);
       let currentDir = root;
+      let currentPath = '';
 
+      // Find or create parent directories
       for (let i = 0; i < pathParts.length - 1; i++) {
-        const dirPath = pathParts.slice(0, i + 1).join('/');
-        let nextDir = directoryCache.get(dirPath);
+        const part = pathParts[i];
+        const parentPath = currentPath;
+        currentPath = currentPath ? `${currentPath}/${part}` : part;
+        
+        let nextDir = directoryCache.get(currentPath);
         if (!nextDir) {
-          nextDir = {
-            name: pathParts[i],
-            path: dirPath,
-            type: "directory",
-            children: [],
-          };
-          currentDir.children.push(nextDir);
-          directoryCache.set(dirPath, nextDir);
+            const parentDir = directoryCache.get(parentPath) ?? root;
+            nextDir = {
+                name: part,
+                path: currentPath,
+                type: 'directory',
+                children: [],
+            };
+            parentDir.children.push(nextDir);
+            directoryCache.set(currentPath, nextDir);
         }
         currentDir = nextDir;
       }
       
       const fileName = pathParts[pathParts.length - 1];
       const mimeType = getMimeType(fileName);
-      const isText = mimeType?.includes("xml") || mimeType?.includes("text");
+      const isText = mimeType?.includes("xml") || mimeType?.includes("text") || !mimeType;
+
 
       const fileNode: UnpackedFile = {
         name: fileName,
