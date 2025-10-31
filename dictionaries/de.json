@@ -1,4 +1,3 @@
-
 {
   "metadata": {
     "title": "Docx Entpacker | Kostenloses Online-Tool zum Anzeigen und Extrahieren von .docx-Dateien",
@@ -35,5 +34,24 @@
         "noPreviewTitle": "Keine Vorschau verfügbar",
         "noPreviewSubtitle": "Für diesen Dateityp kann keine Vorschau angezeigt werden."
     }
-  }
+  },
+  "faq_title": "Häufig Gestellte Fragen",
+  "faq": [
+    {
+      "question": "Was ist der Docx Entpacker?",
+      "answer": "Der Docx Entpacker ist ein kostenloses Online-Tool, mit dem Sie eine Microsoft Word (.docx)-Datei in ihre rohen zugrunde liegenden Komponenten zerlegen können. Sie können die XML-Daten, Bilder und andere Assets, aus denen das Dokument besteht, anzeigen, ohne Software installieren zu müssen."
+    },
+    {
+      "question": "Ist es sicher, meine Dokumente hochzuladen?",
+      "answer": "Ja, absolut. Ihre Privatsphäre und Sicherheit haben oberste Priorität. Der gesamte Entpackungsvorgang findet direkt in Ihrem Browser statt. Ihre Dateien werden niemals auf einen Server hochgeladen, sodass sie für Sie privat bleiben."
+    },
+    {
+      "question": "Warum sollte ich eine .docx-Datei entpacken müssen?",
+      "answer": "Entwickler müssen möglicherweise die XML-Struktur zur Automatisierung oder Fehlerbehebung überprüfen. Designer möchten möglicherweise schnell alle Bilder aus einem Dokument extrahieren. Neugierige möchten vielleicht einfach sehen, wie ein Word-Dokument zusammengestellt ist. Dieses Tool erfüllt all diese Anforderungen."
+    },
+    {
+      "question": "Kann ich die Dateien bearbeiten?",
+      "answer": "Dieses Tool ist derzeit ein Betrachter und Extraktor. Es unterstützt nicht die Bearbeitung der internen Dateien des .docx-Pakets. Sie können jedoch alle Dateien als .zip-Archiv herunterladen, um sie auf Ihrem lokalen Computer zu ändern."
+    }
+  ]
 }

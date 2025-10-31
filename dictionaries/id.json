@@ -1,4 +1,3 @@
-
 {
   "metadata": {
     "title": "Pembongkar Docx | Alat Online Gratis untuk Melihat & Mengekstrak File .docx",
@@ -35,5 +34,24 @@
         "noPreviewTitle": "Tidak ada pratinjau yang tersedia",
         "noPreviewSubtitle": "Tidak dapat menampilkan pratinjau untuk jenis file ini."
     }
-  }
+  },
+  "faq_title": "Pertanyaan yang Sering Diajukan",
+  "faq": [
+    {
+      "question": "Apa itu Pembongkar Docx?",
+      "answer": "Pembongkar Docx adalah alat online gratis yang memungkinkan Anda mendekonstruksi file Microsoft Word (.docx) menjadi komponen dasarnya yang mentah. Anda dapat melihat data XML, gambar, dan aset lain yang membentuk dokumen, semuanya tanpa perlu menginstal perangkat lunak apa pun."
+    },
+    {
+      "question": "Apakah aman mengunggah dokumen saya?",
+      "answer": "Ya, tentu saja. Privasi dan keamanan Anda adalah yang terpenting. Seluruh proses pembongkaran terjadi langsung di browser Anda. File Anda tidak pernah diunggah ke server, jadi file tersebut tetap menjadi milik pribadi Anda."
+    },
+    {
+      "question": "Mengapa saya perlu membongkar file .docx?",
+      "answer": "Pengembang mungkin perlu memeriksa struktur XML untuk otomatisasi atau debugging. Desainer mungkin ingin mengekstrak semua gambar dari dokumen dengan cepat. Orang yang ingin tahu mungkin hanya ingin melihat bagaimana dokumen Word disusun. Alat ini melayani semua kebutuhan itu."
+    },
+    {
+      "question": "Bisakah saya mengedit file?",
+      "answer": "Alat ini saat ini adalah penampil dan ekstraktor. Ini tidak mendukung pengeditan file internal paket .docx. Namun, Anda dapat mengunduh semua file sebagai arsip .zip untuk memodifikasinya di mesin lokal Anda."
+    }
+  ]
 }

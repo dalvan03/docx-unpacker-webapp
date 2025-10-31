@@ -34,5 +34,24 @@
         "noPreviewTitle": "No hay vista previa disponible",
         "noPreviewSubtitle": "No se puede mostrar una vista previa para este tipo de archivo."
     }
-  }
+  },
+  "faq_title": "Preguntas Frecuentes",
+  "faq": [
+    {
+      "question": "¿Qué es el Descompresor Docx?",
+      "answer": "El Descompresor Docx es una herramienta en línea gratuita que te permite deconstruir un archivo de Microsoft Word (.docx) en sus componentes básicos sin procesar. Puedes ver los datos XML, las imágenes y otros activos que componen el documento, todo sin necesidad de instalar ningún software."
+    },
+    {
+      "question": "¿Es seguro subir mis documentos?",
+      "answer": "Sí, absolutamente. Tu privacidad y seguridad son primordiales. Todo el proceso de descompresión ocurre directamente en tu navegador. Tus archivos nunca se suben a un servidor, por lo que permanecen privados para ti."
+    },
+    {
+      "question": "¿Por qué necesitaría descomprimir un archivo .docx?",
+      "answer": "Los desarrolladores pueden necesitar inspeccionar la estructura XML para automatización o depuración. Los diseñadores pueden querer extraer rápidamente todas las imágenes de un documento. Las mentes curiosas simplemente pueden querer ver cómo se arma un documento de Word. Esta herramienta satisface todas esas necesidades."
+    },
+    {
+      "question": "¿Puedo editar los archivos?",
+      "answer": "Esta herramienta es actualmente un visor y extractor. No admite la edición de los archivos internos del paquete .docx. Sin embargo, puedes descargar todos los archivos como un archivo .zip para modificarlos en tu máquina local."
+    }
+  ]
 }

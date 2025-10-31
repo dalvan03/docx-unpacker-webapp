@@ -1,7 +1,9 @@
 import DocxUnpacker from "@/components/docx-unpacker";
+import Faq from "@/components/faq";
 import { PackageOpen } from "lucide-react";
 import { getDictionary } from '@/get-dictionary'
 import { Locale } from '../../../i18n-config';
+import { Separator } from "@/components/ui/separator";
 
 export default async function Home({ params: { locale } }: { params: { locale: Locale } }) {
   const dictionary = await getDictionary(locale);
@@ -22,8 +24,10 @@ export default async function Home({ params: { locale } }: { params: { locale: L
       </header>
       <main className="flex-grow">
         <DocxUnpacker dictionary={dictionary.docxUnpacker} />
+        <Separator className="my-8" />
+        <Faq dictionary={dictionary} />
       </main>
-      <footer className="py-4 border-t">
+      <footer className="py-4 border-t mt-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-muted-foreground">
           <p>{dictionary.page.footer}</p>
         </div>

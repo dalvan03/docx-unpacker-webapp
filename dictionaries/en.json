@@ -34,5 +34,24 @@
         "noPreviewTitle": "No preview available",
         "noPreviewSubtitle": "Cannot display a preview for this file type."
     }
-  }
+  },
+  "faq_title": "Frequently Asked Questions",
+  "faq": [
+    {
+      "question": "What is the Docx Unpacker?",
+      "answer": "The Docx Unpacker is a free online tool that allows you to deconstruct a Microsoft Word (.docx) file into its raw underlying components. You can view the XML data, images, and other assets that make up the document, all without needing to install any software."
+    },
+    {
+      "question": "Is it safe to upload my documents?",
+      "answer": "Yes, absolutely. Your privacy and security are paramount. The entire unpacking process happens directly in your browser. Your files are never uploaded to a server, so they remain private to you."
+    },
+    {
+      "question": "Why would I need to unpack a .docx file?",
+      "answer": "Developers might need to inspect the XML structure for automation or debugging. Designers may want to quickly extract all images from a document. Curious minds might simply want to see how a Word document is put together. This tool serves all those needs."
+    },
+    {
+      "question": "Can I edit the files?",
+      "answer": "This tool is currently a viewer and extractor. It does not support editing the internal files of the .docx package. You can, however, download all the files as a .zip archive to modify them on your local machine."
+    }
+  ]
 }

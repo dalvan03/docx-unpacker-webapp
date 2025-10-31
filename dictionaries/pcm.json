@@ -1,4 +1,3 @@
-
 {
   "metadata": {
     "title": "Docx Unpacker | Free Online Tool to See & Comot .docx Files",
@@ -35,5 +34,24 @@
         "noPreviewTitle": "No preview dey",
         "noPreviewSubtitle": "We no fit show preview for dis kain file."
     }
-  }
+  },
+  "faq_title": "Questions Wey People Dey Ask",
+  "faq": [
+    {
+      "question": "Wetin be Docx Unpacker?",
+      "answer": "Docx Unpacker na free tool for internet wey go help you scatter Microsoft Word (.docx) file into di small-small things wey make am. You fit see di XML data, pictures, and other things wey dey inside di document, and you no need to install any software."
+    },
+    {
+      "question": "E safe to put my document for here?",
+      "answer": "Yes, e safe well-well. Your secret na your secret. All di unpacking dey happen for inside your browser. We no dey carry your file go anywhere, so e remain for your hand."
+    },
+    {
+      "question": "Why I go need to unpack .docx file sef?",
+      "answer": "People wey dey write code fit need to check di XML structure make dem fit do automation or solve problem. People wey dey design fit wan quickly comot all di picture from document. Or you just wan know wetin dey inside Word document. Dis tool dey for all dat."
+    },
+    {
+      "question": "I fit change di files?",
+      "answer": "For now, dis tool na just to see and comot things. E no fit change di files inside di .docx package. But, you fit download all di files as .zip make you fit change am for your computer."
+    }
+  ]
 }

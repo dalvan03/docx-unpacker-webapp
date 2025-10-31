@@ -1,4 +1,3 @@
-
 {
   "metadata": {
     "title": "Docx Unpacker | Gratis Online Tool om .docx-bestanden te Bekijken & Uit te Pakken",
@@ -35,5 +34,24 @@
         "noPreviewTitle": "Geen voorbeeld beschikbaar",
         "noPreviewSubtitle": "Kan geen voorbeeld weergeven voor dit bestandstype."
     }
-  }
+  },
+  "faq_title": "Veelgestelde Vragen",
+  "faq": [
+    {
+      "question": "Wat is de Docx Unpacker?",
+      "answer": "De Docx Unpacker is een gratis online tool waarmee u een Microsoft Word (.docx) bestand kunt ontleden in zijn onbewerkte onderliggende componenten. U kunt de XML-gegevens, afbeeldingen en andere middelen bekijken die het document vormen, allemaal zonder software te hoeven installeren."
+    },
+    {
+      "question": "Is het veilig om mijn documenten te uploaden?",
+      "answer": "Ja, absoluut. Uw privacy en veiligheid staan voorop. Het volledige uitpakproces vindt rechtstreeks in uw browser plaats. Uw bestanden worden nooit naar een server geüpload, dus ze blijven privé voor u."
+    },
+    {
+      "question": "Waarom zou ik een .docx-bestand moeten uitpakken?",
+      "answer": "Ontwikkelaars moeten mogelijk de XML-structuur inspecteren voor automatisering of foutopsporing. Ontwerpers willen misschien snel alle afbeeldingen uit een document extraheren. Nieuwsgierige geesten willen misschien gewoon zien hoe een Word-document is samengesteld. Deze tool voldoet aan al die behoeften."
+    },
+    {
+      "question": "Kan ik de bestanden bewerken?",
+      "answer": "Deze tool is momenteel een viewer en extractor. Het ondersteunt geen bewerking van de interne bestanden van het .docx-pakket. U kunt echter alle bestanden als een .zip-archief downloaden om ze op uw lokale machine aan te passen."
+    }
+  ]
 }

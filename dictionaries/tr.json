@@ -1,4 +1,3 @@
-
 {
   "metadata": {
     "title": "Docx Paket Açıcı | .docx Dosyalarını Görüntülemek ve Çıkarmak için Ücretsiz Çevrimiçi Araç",
@@ -35,5 +34,24 @@
         "noPreviewTitle": "Önizleme yok",
         "noPreviewSubtitle": "Bu dosya türü için bir önizleme görüntülenemiyor."
     }
-  }
+  },
+  "faq_title": "Sıkça Sorulan Sorular",
+  "faq": [
+    {
+      "question": "Docx Paket Açıcı nedir?",
+      "answer": "Docx Paket Açıcı, bir Microsoft Word (.docx) dosyasını ham temel bileşenlerine ayırmanıza olanak tanıyan ücretsiz bir çevrimiçi araçtır. Belgeyi oluşturan XML verilerini, resimleri ve diğer varlıkları herhangi bir yazılım yüklemeye gerek kalmadan görüntüleyebilirsiniz."
+    },
+    {
+      "question": "Belgelerimi yüklemek güvenli mi?",
+      "answer": "Evet, kesinlikle. Gizliliğiniz ve güvenliğiniz her şeyden önemlidir. Tüm paket açma işlemi doğrudan tarayıcınızda gerçekleşir. Dosyalarınız asla bir sunucuya yüklenmez, bu yüzden size özel kalırlar."
+    },
+    {
+      "question": "Neden bir .docx dosyasını açmam gereksin?",
+      "answer": "Geliştiricilerin otomasyon veya hata ayıklama için XML yapısını incelemesi gerekebilir. Tasarımcılar bir belgeden tüm görüntüleri hızla çıkarmak isteyebilirler. Meraklı beyinler sadece bir Word belgesinin nasıl bir araya getirildiğini görmek isteyebilirler. Bu araç tüm bu ihtiyaçları karşılar."
+    },
+    {
+      "question": "Dosyaları düzenleyebilir miyim?",
+      "answer": "Bu araç şu anda bir görüntüleyici ve çıkarıcıdır. .docx paketinin dahili dosyalarını düzenlemeyi desteklemez. Ancak, yerel makinenizde değiştirmek için tüm dosyaları bir .zip arşivi olarak indirebilirsiniz."
+    }
+  ]
 }

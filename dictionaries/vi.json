@@ -1,4 +1,3 @@
-
 {
   "metadata": {
     "title": "Trình giải nén Docx | Công cụ trực tuyến miễn phí để xem và giải nén tệp .docx",
@@ -35,5 +34,24 @@
         "noPreviewTitle": "Không có bản xem trước",
         "noPreviewSubtitle": "Không thể hiển thị bản xem trước cho loại tệp này."
     }
-  }
+  },
+  "faq_title": "Các câu hỏi thường gặp",
+  "faq": [
+    {
+      "question": "Trình giải nén Docx là gì?",
+      "answer": "Trình giải nén Docx là một công cụ trực tuyến miễn phí cho phép bạn phân tách tệp Microsoft Word (.docx) thành các thành phần cơ bản thô của nó. Bạn có thể xem dữ liệu XML, hình ảnh và các tài sản khác tạo nên tài liệu mà không cần cài đặt bất kỳ phần mềm nào."
+    },
+    {
+      "question": "Tải lên tài liệu của tôi có an toàn không?",
+      "answer": "Có, hoàn toàn an toàn. Quyền riêng tư và bảo mật của bạn là điều tối quan trọng. Toàn bộ quá trình giải nén diễn ra trực tiếp trong trình duyệt của bạn. Tệp của bạn không bao giờ được tải lên máy chủ, vì vậy chúng vẫn ở chế độ riêng tư đối với bạn."
+    },
+    {
+      "question": "Tại sao tôi cần giải nén tệp .docx?",
+      "answer": "Các nhà phát triển có thể cần kiểm tra cấu trúc XML để tự động hóa hoặc gỡ lỗi. Các nhà thiết kế có thể muốn nhanh chóng trích xuất tất cả hình ảnh từ một tài liệu. Những người tò mò có thể chỉ muốn xem một tài liệu Word được kết hợp với nhau như thế nào. Công cụ này phục vụ tất cả những nhu cầu đó."
+    },
+    {
+      "question": "Tôi có thể chỉnh sửa các tệp không?",
+      "answer": "Công cụ này hiện là một trình xem và trình trích xuất. Nó không hỗ trợ chỉnh sửa các tệp nội bộ của gói .docx. Tuy nhiên, bạn có thể tải xuống tất cả các tệp dưới dạng kho lưu trữ .zip để sửa đổi chúng trên máy cục bộ của bạn."
+    }
+  ]
 }

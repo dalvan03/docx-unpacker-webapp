@@ -34,5 +34,24 @@
         "noPreviewTitle": "Nenhuma visualização disponível",
         "noPreviewSubtitle": "Não é possível exibir uma visualização para este tipo de arquivo."
     }
-  }
+  },
+  "faq_title": "Perguntas Frequentes",
+  "faq": [
+    {
+      "question": "O que é o Descompactador Docx?",
+      "answer": "O Descompactador Docx é uma ferramenta online gratuita que permite desconstruir um arquivo Microsoft Word (.docx) em seus componentes brutos. Você pode visualizar os dados XML, imagens e outros recursos que compõem o documento, tudo sem precisar instalar nenhum software."
+    },
+    {
+      "question": "É seguro fazer upload dos meus documentos?",
+      "answer": "Sim, absolutamente. Sua privacidade e segurança são primordiais. Todo o processo de descompactação acontece diretamente no seu navegador. Seus arquivos nunca são enviados para um servidor, então eles permanecem privados para você."
+    },
+    {
+      "question": "Por que eu precisaria descompactar um arquivo .docx?",
+      "answer": "Desenvolvedores podem precisar inspecionar a estrutura XML para automação ou depuração. Designers podem querer extrair rapidamente todas as imagens de um documento. Mentes curiosas podem simplesmente querer ver como um documento do Word é montado. Esta ferramenta atende a todas essas necessidades."
+    },
+    {
+      "question": "Posso editar os arquivos?",
+      "answer": "Atualmente, esta ferramenta é um visualizador e extrator. Ela não suporta a edição dos arquivos internos do pacote .docx. No entanto, você pode baixar todos os arquivos como um arquivo .zip para modificá-los em sua máquina local."
+    }
+  ]
 }

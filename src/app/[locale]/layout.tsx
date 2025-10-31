@@ -54,13 +54,14 @@ export async function generateMetadata(
 }
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: Locale };
 }>) {
+  const dictionary = await getDictionary(params.locale);
   const isRtl = params.locale === 'ar' || params.locale === 'ur' || params.locale === 'arz';
   
   const getFontFamily = (locale: Locale) => {
@@ -90,6 +91,19 @@ export default function RootLayout({
 
   const fontClass = getFontFamily(params.locale);
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: dictionary.faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
     <html lang={params.locale} dir={isRtl ? 'rtl' : 'ltr'}>
       <head>
@@ -104,7 +118,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet" />
-
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       </head>
       <body className={`antialiased ${fontClass}`}>
           {children}
