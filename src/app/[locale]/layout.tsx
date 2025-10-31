@@ -15,10 +15,14 @@ export async function generateMetadata(
   const dictionary = await getDictionary(params.locale);
   const metadata = dictionary.metadata;
 
+  const parentKeywords = (await parent).keywords || [];
+  const newKeywords = Array.isArray(parentKeywords) ? [...metadata.keywords, ...parentKeywords] : metadata.keywords;
+
+
   return {
     title: metadata.title,
     description: metadata.description,
-    keywords: metadata.keywords,
+    keywords: newKeywords,
     openGraph: {
       title: metadata.title,
       description: metadata.description,
@@ -41,17 +45,10 @@ export async function generateMetadata(
     },
     alternates: {
       canonical: `${metadata.url}/${params.locale}`,
-      languages: {
-        'en-US': `${metadata.url}/en`,
-        'pt-BR': `${metadata.url}/pt`,
-        'es-ES': `${metadata.url}/es`,
-        'zh-CN': `${metadata.url}/zh`,
-        'ru-RU': `${metadata.url}/ru`,
-        'ar-AE': `${metadata.url}/ar`,
-        'fr-FR': `${metadata.url}/fr`,
-        'de-DE': `${metadata.url}/de`,
-        'nl-NL': `${metadata.url}/nl`,
-      },
+      languages: i18n.locales.reduce((acc, locale) => {
+        acc[locale] = `${metadata.url}/${locale}`;
+        return acc;
+      }, {} as Record<string, string>),
     },
   };
 }
@@ -70,10 +67,13 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={`font-body antialiased ${isRtl ? 'font-arabic' : ''}`}>{children}<Toaster /></body>
+      <body className={`font-body antialiased ${isRtl ? 'font-arabic' : ''}`}>
+          {children}
+          <Toaster />
+      </body>
     </html>
   );
 }
