@@ -24,28 +24,18 @@ function getMimeType(filename: string): string | undefined {
 }
 
 export async function unpackDocx(
-  formData: FormData
+  { fileBuffer, fileName }: { fileBuffer: ArrayBuffer, fileName: string }
 ): Promise<{ error?: string; files?: UnpackedFile[] }> {
-  const file = formData.get("file") as File;
 
-  if (!file) {
-    return { error: "No file uploaded." };
-  }
-
-  if (
-    !file.name.endsWith(".docx") &&
-    file.type !==
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-  ) {
-    return { error: "Invalid file type. Please upload a .docx file." };
+  if (!fileBuffer) {
+    return { error: "No file data received." };
   }
 
   try {
-    const arrayBuffer = await file.arrayBuffer();
-    const zip = await JSZip.loadAsync(arrayBuffer);
+    const zip = await JSZip.loadAsync(fileBuffer);
 
     const root: UnpackedFile = {
-      name: file.name,
+      name: fileName,
       path: "",
       type: "directory",
       children: [],

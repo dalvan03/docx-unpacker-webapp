@@ -29,17 +29,22 @@ export default function DocxUnpacker() {
     setSelectedFile(null);
     setFileName(file.name);
 
-    const formData = new FormData();
-    formData.append("file", file);
+    try {
+      const fileBuffer = await file.arrayBuffer();
+      const result = await unpackDocx({ fileBuffer, fileName: file.name });
 
-    const result = await unpackDocx(formData);
-
-    if (result.error) {
-      setError(result.error);
-    } else if (result.files) {
-      setUnpackedContent(result.files);
+      if (result.error) {
+        setError(result.error);
+      } else if (result.files) {
+        setUnpackedContent(result.files);
+      }
+    } catch (e: unknown) {
+        console.error("Error processing file:", e);
+        const errorMessage = e instanceof Error ? e.message : "An unknown error occurred.";
+        setError(`Failed to read or process the file. ${errorMessage}`);
+    } finally {
+        setIsLoading(false);
     }
-    setIsLoading(false);
   };
 
   const handleReset = () => {
@@ -95,7 +100,7 @@ export default function DocxUnpacker() {
     <div className="container mx-auto p-4 sm:p-6 lg:p-8 flex-grow flex flex-col">
       {(isLoading || error) && (
         <div className="fixed inset-0 bg-background/80 flex items-center justify-center z-50">
-          {isLoading && (
+          {isLoading && !error && (
             <div className="flex flex-col items-center gap-4 p-8 bg-card rounded-lg shadow-2xl">
               <Spinner className="h-12 w-12 text-primary" />
               <p className="text-lg font-medium text-foreground">
