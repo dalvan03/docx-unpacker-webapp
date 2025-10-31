@@ -1,0 +1,39 @@
+
+{
+  "metadata": {
+    "title": "مستخرج Docx | أداة مجانية عبر الإنترنت لعرض واستخراج ملفات .docx",
+    "description": "قم بفك حزم وعرض وتنزيل محتويات ملفات .docx الخاصة بك على الفور. استكشف ملفات XML الأولية وملفات الوسائط داخل أي مستند Word مباشرة في متصفحك. لا يلزم تثبيت أي برنامج.",
+    "keywords": ["مستخرج docx", "عارض docx", "استخراج docx", "فتح docx عبر الإنترنت", "docx إلى xml", "عرض محتويات مستند word", "أداة docx مجانية"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "واجهة أداة مستخرج Docx"
+  },
+  "page": {
+    "title": "مستخرج Docx",
+    "footer": "تم إنشاؤه باستخدام Next.js و Tailwind CSS. قم بفك حزم ملفات .docx بسهولة."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "جارٍ فك حزمة المستند...",
+    "errorTitle": "حدث خطأ",
+    "tryAgain": "حاول مرة أخرى",
+    "contentsOf": "محتويات",
+    "startOver": "البدء من جديد",
+    "downloadAll": "تنزيل الكل (.zip)",
+    "fileStructure": "هيكل الملف",
+    "fileReadError": "فشل في قراءة الملف أو معالجته.",
+    "unknownError": "حدث خطأ غير معروف.",
+    "fileUpload": {
+      "title": "اسحب ملف .docx الخاص بك هنا",
+      "subtitle": "أو انقر أدناه لتحديد ملف من جهاز الكمبيوتر الخاص بك",
+      "button": "تصفح الملفات",
+      "validationError": "يرجى تحميل ملف .docx."
+    },
+    "fileViewer": {
+        "selectFileTitle": "اختر ملفًا",
+        "selectFileSubtitle": "انقر فوق ملف في الهيكل لعرض محتوياته.",
+        "previewTab": "معاينة",
+        "rawXmlTab": "XML خام",
+        "noPreviewTitle": "لا توجد معاينة متاحة",
+        "noPreviewSubtitle": "لا يمكن عرض معاينة لنوع الملف هذا."
+    }
+  }
+}

@@ -45,6 +45,9 @@ export async function generateMetadata(
         'en-US': `${metadata.url}/en`,
         'pt-BR': `${metadata.url}/pt`,
         'es-ES': `${metadata.url}/es`,
+        'zh-CN': `${metadata.url}/zh`,
+        'ru-RU': `${metadata.url}/ru`,
+        'ar-AE': `${metadata.url}/ar`,
       },
     },
   };
@@ -58,14 +61,16 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: Locale };
 }>) {
+  const isRtl = params.locale === 'ar';
   return (
-    <html lang={params.locale}>
+    <html lang={params.locale} dir={isRtl ? 'rtl' : 'ltr'}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased">{children}<Toaster /></body>
+      <body className={`font-body antialiased ${isRtl ? 'font-arabic' : ''}`}>{children}<Toaster /></body>
     </html>
   );
 }
