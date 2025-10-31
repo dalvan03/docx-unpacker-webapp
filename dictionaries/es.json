@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Descompresor Docx | Herramienta Online Gratuita para Ver y Extraer Archivos .docx",
+    "description": "Descomprime, visualiza y descarga el contenido de tus archivos .docx al instante. Explora los archivos XML y multimedia de cualquier documento de Word directamente en tu navegador. No requiere instalación de software.",
+    "keywords": ["descompresor docx", "visualizador docx", "extraer docx", "abrir docx online", "docx a xml", "ver contenido de documento word", "herramienta docx gratis"],
+    "url": "https://your-app-url.com",
+    "ogImageAlt": "Interfaz de la Herramienta Descompresor Docx"
+  },
+  "page": {
+    "title": "Descompresor Docx",
+    "footer": "Construido con Next.js y Tailwind CSS. Descomprime archivos .docx con facilidad."
+  },
+  "docxUnpacker": {
+    "unpackingMessage": "Descomprimiendo tu documento...",
+    "errorTitle": "Ocurrió un Error",
+    "tryAgain": "Intentar de Nuevo",
+    "contentsOf": "Contenido de",
+    "startOver": "Empezar de Nuevo",
+    "downloadAll": "Descargar Todo (.zip)",
+    "fileStructure": "Estructura de Archivos",
+    "fileReadError": "Error al leer o procesar el archivo.",
+    "unknownError": "Ocurrió un error desconocido.",
+    "fileUpload": {
+      "title": "Arrastra tu archivo .docx aquí",
+      "subtitle": "o haz clic abajo para seleccionar un archivo de tu computadora",
+      "button": "Buscar Archivos",
+      "validationError": "Por favor, sube un archivo .docx."
+    },
+    "fileViewer": {
+        "selectFileTitle": "Selecciona un archivo",
+        "selectFileSubtitle": "Haz clic en un archivo en la estructura para ver su contenido.",
+        "previewTab": "Vista Previa",
+        "rawXmlTab": "XML sin formato",
+        "noPreviewTitle": "No hay vista previa disponible",
+        "noPreviewSubtitle": "No se puede mostrar una vista previa para este tipo de archivo."
+    }
+  }
+}

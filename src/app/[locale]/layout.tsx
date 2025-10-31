@@ -44,6 +44,7 @@ export async function generateMetadata(
       languages: {
         'en-US': `${metadata.url}/en`,
         'pt-BR': `${metadata.url}/pt`,
+        'es-ES': `${metadata.url}/es`,
       },
     },
   };
