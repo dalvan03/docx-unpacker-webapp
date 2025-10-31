@@ -6,6 +6,22 @@ import Image from "next/image";
 import { FileQuestion, Code, Eye } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
 
+function formatXml(xml: string) {
+    const PADDING = ' '.repeat(2);
+    let formatted = '';
+    let indent = '';
+
+    xml = xml.replace(/(>)(<)(\/*)/g, '$1\r\n$2$3');
+
+    xml.split('\r\n').forEach(node => {
+        if (node.match( /^\/\w/ )) indent = indent.substring(PADDING.length);
+        formatted += indent + node + '\r\n';
+        if (node.match( /^<?\w[^>]*[^\/]$/ )) indent += PADDING;
+    });
+
+    return formatted.trim();
+};
+
 
 export function FileViewer({ file }: { file: UnpackedFile | null }) {
   if (!file) {
@@ -21,6 +37,8 @@ export function FileViewer({ file }: { file: UnpackedFile | null }) {
   const isImage = file.mimeType?.startsWith("image/");
   const isXml = file.mimeType?.includes("xml");
   const isPreviewableXml = isXml && file.path.includes("document.xml");
+
+  const formattedXmlContent = isXml && file.content ? formatXml(file.content) : '';
 
   const renderContent = () => {
     if (isImage) {
@@ -56,7 +74,7 @@ export function FileViewer({ file }: { file: UnpackedFile | null }) {
                 <TabsContent value="raw" className="flex-grow overflow-hidden m-0">
                     <ScrollArea className="h-full">
                         <pre className="text-xs p-4">
-                            <code>{file.content}</code>
+                            <code>{formattedXmlContent}</code>
                         </pre>
                     </ScrollArea>
                 </TabsContent>
@@ -68,7 +86,7 @@ export function FileViewer({ file }: { file: UnpackedFile | null }) {
         return (
              <ScrollArea className="h-full">
                 <pre className="text-xs p-4">
-                    <code>{file.content}</code>
+                    <code>{formattedXmlContent}</code>
                 </pre>
             </ScrollArea>
         )
