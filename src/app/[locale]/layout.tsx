@@ -2,7 +2,7 @@ import type { Metadata, ResolvingMetadata } from 'next';
 import '../globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { i18n, type Locale } from '../../../i18n-config';
-import { getDictionary } from '@/get-dictionary';
+import { getDictionary } from '../../get-dictionary';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
@@ -18,8 +18,10 @@ export async function generateMetadata(
   const parentKeywords = (await parent).keywords || [];
   const newKeywords = Array.isArray(parentKeywords) ? [...metadata.keywords, ...parentKeywords] : metadata.keywords;
 
+  const baseUrl = new URL(metadata.url);
 
   return {
+    metadataBase: baseUrl,
     title: metadata.title,
     description: metadata.description,
     keywords: newKeywords,
@@ -27,7 +29,7 @@ export async function generateMetadata(
       title: metadata.title,
       description: metadata.description,
       type: 'website',
-      url: metadata.url,
+      url: `/${params.locale}`,
       images: [
         {
           url: '/og-image.png',
@@ -44,9 +46,9 @@ export async function generateMetadata(
       images: ['/og-image.png'],
     },
     alternates: {
-      canonical: `${metadata.url}/${params.locale}`,
+      canonical: `/${params.locale}`,
       languages: i18n.locales.reduce((acc, locale) => {
-        acc[locale] = `${metadata.url}/${locale}`;
+        acc[locale] = `/${locale}`;
         return acc;
       }, {} as Record<string, string>),
     },
