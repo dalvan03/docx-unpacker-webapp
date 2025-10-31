@@ -12,7 +12,87 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Spinner } from "./icons";
 import type { Dictionary } from "@/get-dictionary";
-import { unpackDocx } from "@/app/actions";
+import { getMimeType } from "@/lib/utils";
+
+async function unpackDocxClient(
+    fileBuffer: ArrayBuffer
+  ): Promise<{ error?: string; files?: UnpackedFile[] }> {
+    if (!fileBuffer) {
+      return { error: "No file data received." };
+    }
+  
+    try {
+      const zip = await JSZip.loadAsync(fileBuffer);
+      const root: UnpackedFile = {
+        name: "root", // a temporary root
+        path: "",
+        type: "directory",
+        children: [],
+      };
+  
+      const directoryCache = new Map<string, UnpackedFile>();
+      directoryCache.set('', root);
+  
+      const zipEntries = Object.values(zip.files).sort((a, b) => a.name.localeCompare(b.name));
+  
+      for (const zipEntry of zipEntries) {
+        if (zipEntry.dir) continue;
+  
+        const pathParts = zipEntry.name.split("/").filter(p => p);
+        if (pathParts.length === 0) continue;
+        
+        let currentPath = '';
+        
+        for (let i = 0; i < pathParts.length - 1; i++) {
+          const part = pathParts[i];
+          const parentPath = currentPath;
+          currentPath = currentPath ? `${currentPath}/${part}` : part;
+          
+          if (!directoryCache.has(currentPath)) {
+            const parentDir = directoryCache.get(parentPath);
+            if(!parentDir) continue; // Should not happen
+            const newDir: UnpackedFile = {
+              name: part,
+              path: currentPath,
+              type: 'directory',
+              children: [],
+            };
+            parentDir.children.push(newDir);
+            directoryCache.set(currentPath, newDir);
+          }
+        }
+  
+        const parentDir = directoryCache.get(currentPath);
+        if(!parentDir) continue; // Should not happen
+  
+        const entryFileName = pathParts[pathParts.length - 1];
+        const mimeType = getMimeType(entryFileName);
+        const isText = mimeType?.includes("xml") || mimeType?.includes("text") || !mimeType;
+  
+        const fileNode: UnpackedFile = {
+          name: entryFileName,
+          path: zipEntry.name,
+          type: "file",
+          mimeType,
+          children: [],
+          content: await zipEntry.async(isText ? "string" : "base64"),
+        };
+  
+        parentDir.children.push(fileNode);
+      }
+  
+      return { files: root.children };
+    } catch (e: unknown) {
+      console.error("Error unpacking docx:", e);
+      if (e instanceof Error) {
+        return {
+          error: `Failed to unpack the file. It may be corrupted or in an unexpected format. Details: ${e.message}`,
+        };
+      }
+      return { error: "An unknown error occurred while unpacking the file." };
+    }
+}
+
 
 export default function DocxUnpacker({ dictionary }: { dictionary: Dictionary['docxUnpacker'] }) {
   const [unpackedContent, setUnpackedContent] = useState<UnpackedFile[] | null>(
@@ -32,7 +112,7 @@ export default function DocxUnpacker({ dictionary }: { dictionary: Dictionary['d
 
     try {
         const fileBuffer = await file.arrayBuffer();
-        const result = await unpackDocx(fileBuffer);
+        const result = await unpackDocxClient(fileBuffer);
 
       if (result.error) {
         setError(result.error);
